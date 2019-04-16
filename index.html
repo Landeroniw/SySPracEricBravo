@@ -1,0 +1,339 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <link href="main.css" rel="stylesheet"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <title>P03</title>
+    <meta name="generator" content="MATLAB 9.6">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.date" content="2019-04-15"><meta name="DC.source" content="fun1.m">
+</head>
+
+<!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+
+    <body>
+        
+      <h1 id ="gg">UPIITA</h1>  
+        <h1 id ="gg">IPN</h1>
+        <h1 id ="gg">Integrantes:</h1> 
+        <p>        Bravo Padilla Eric</p>
+        <p>        Calderon Landeros Sergio David</p>
+        <p>        Sanchez Lara Jose Maria</p>
+        <p>        Noe Millan Yuval Zuriel</p>
+        <p></p>
+        <h1 id ="gg">Índice</h1> 
+        <a href = "#Intro">Introducción</a><br>
+        <a href = "#Objetivos">Objetivos</a><br>
+        <a href = "#Desarrollo">Desarrollo</a><br>
+        <a href = "#p1">Problema 1</a><br>
+        <a href = "#p2">Problema 2</a><br>
+        <a href = "#p3">Problema 3</a><br>
+        <a href = "#p4">Problema 4</a><br>
+        <a href = "#p5">Problema 5</a><br>
+        <a href = "#p6">Problema 6</a><br>
+        <a href = "#p7">Problema 7</a><br>
+        <a name="Intro"></a> 
+      <h1 id ="gg">Introducción</h1> 
+        <p>Matlab nace como una solución a la necesidad de mejores y más poderosas herramientas de cálculo para resolver problemas de cálculo complejos en los que es necesario aprovechar las amplias capacidades de proceso de datos de grandes computadores.</p>
+        <p>Surge en 1984 la primera versión, elaborada por: Steve Bangert, que escribió el intérprete parser, Steve Kleiman que implementó los gráficos, John Little y Cleve Moler que escribieron las rutinas de análisis, la guía de usuario y la mayoría de los ficheros ‘.m’. Todo con la idea de usar paquetes de subrutinas escritas en Fortran en los cursos de Análisis Numérico y Algebra Lineal, sin tener una necesidad de programas que usarán este lenguaje.
+</p>
+        <p>Desde la primera versión muchas otras personas han contribuido al desarrollo de Matlab.</p>
+        <p>El nombre viene de "Matrix Laboratory" (laboratorio matricial). Este fue originalmente escrito en 1970 para proveer acceso fácil al software matricial desarrollado por los proyectos LINPACK y EISPACK, que juntos  representan el estado del arte de software para computación matricial.</p>
+        <p>En 2004 se apreciaba que era usado por aproximadamente más de un millón de personas, tanto académicos como empresarios.</p>
+        <p>La versión actual fue escrita en C por The Mathworks. Hoy es usado en una variedad de áreas de aplicación incluyendo procesamiento de señales e imágenes, diseño de sistemas de control, ingeniería financiera e investigación médica. La arquitectura abierta facilita usar Matlab y los productos que lo acompañan para explorar datos y crear herramientas personalizadas que proveen visiones profundas tempranas y ventajas competitivas.</p>
+        <p>A pesar de todos los pros que ofrece dicho software, se necesitan licencias para poder usarlo y desafortunadamente existen personas a las que no les es posible obtenerlas. Aquí es donde entran las alternativas de software libre como Octave y Phyton.</p>
+        <p>Python es un lenguaje de programación interpretado de alto nivel para programación de propósito general. Creado por Guido van Rossum y lanzado por primera vez en 1991, este tiene una filosofía de diseño que enfatiza la legibilidad del código, especialmente al usar espacios en blanco significativos. Proporciona construcciones que permiten una programación clara tanto en escalas pequeñas como grandes.</p>
+        <p>Entre sus ventajas se encuentran:<br>
+* Desarrollo de principio a fin para ejecución (algunos paquetes de brokers permiten la ejecución, IB).<br>
+* Paquetes de código abierto (Pandas, Numpy, scipy).<br>
+* Paquetes comerciales (zipline, pybacktest, pyalgotrade).<br>
+* Lo mejor para programación general y desarrollo de aplicaciones.<br>
+* Puede ser un lenguaje de "pegamento" para conectar R, C ++ y otros.<br>
+* La velocidad general más rápida, especialmente en bucles iterativos.<br>
+</p>
+        <p>Entre sus desventajas se encuentran: <br>
+* Paquetes inmaduros, especialmente paquetes comerciales.<br>
+* Algunos paquetes no son compatibles con otros o contienen solapamiento.<br>
+* Comunidad más pequeña que R en finanzas.<br>
+* Se requiere más código para las mismas operaciones en comparación a R o Matlab.<br>
+* Errores silenciosos que pueden tardar mucho tiempo en rastrearse, incluso con depuradores visuales / IDE.<br>
+</p>
+        <p>Por otra parte, Octave es una especie de respuesta GNU a Matlab. Es decir, es un lenguaje de matriz de secuencias de comandos y tiene una sintaxis que es aproximadamente 95% compatible con ese software. Es un lenguaje diseñado por ingenieros y, por lo tanto, está muy cargado de rutinas comúnmente utilizadas por los ingenieros. Tiene muchas de las mismas rutinas de análisis de series temporales, rutinas de estadísticas, comandos de archivos y comandos de trazado del lenguaje Matlab.</p>
+        <p>En cuanto a sus ventajas:
+* En primer lugar, no hay un compilador robusto de Octave disponible y esto tampoco es realmente necesario, ya que el software se puede instalar de forma gratuita.<br>
+* En cuanto al elemento de lenguaje, los dos paquetes son idénticos, excepto por algunas particularidades como las funciones anidadas. Octave está en constante desarrollo activo y cada desviación de la sintaxis de Matlab se trata como un error o al menos como un problema por resolver.<br>
+* También hay una gran cantidad de cajas de herramientas disponibles para Octave y siempre que un programa no requiera una salida gráfica, es muy probable que se ejecute bajo este al igual que bajo Matlab sin una modificación considerable.<br>
+* Las capacidades gráficas son claramente una ventaja de Matlab. Las últimas versiones incluyen un diseñador de GUI además de excelentes características de visualización.<br>
+* Octave usa GNU Plot o JHandles como paquetes de gráficos, donde este último está más cerca de lo que proporciona Matlab. Sin embargo, no hay equivalentes de Octave para un diseñador de GUI y los mecanismos de visualización son de alguna manera limitados y no son compatibles con Matlab.<br>
+* Lo mismo vale para un entorno de desarrollo integrado. Hay un proyecto llamado QTOctave, pero todavía está en una etapa temprana.<br>
+* Al observar los esfuerzos de colaboración que se llevan a cabo alrededor de la comunidad de Octave, es probable que este software pronto brinde mejores y posiblemente compatibles gráficos y capacidades de GUI, y vale la pena verlo antes de comprar Matlab.<br>
+</p>
+        <p>Y en cuanto a sus desventajas:<br>
+* Es solo una fuente abierta gratuita de MATLAB y no nos traiga nada nuevo.
+</p>
+        <p></p>
+        <a name="Objetivos"></a> 
+        <h1 id ="gg"  >Objetivos:</h1> 
+        
+       <p>Manipulación básica de MATLAB</p> 
+        <p>Gráficas de señales reales y complejas continuas</p>
+<p>Transformación de señales continuas (escalamientos y traslaciones</p>
+<p>Calculo de energía y potencia de señales continuas</p>
+<a name="Desarrollo"></a> 
+        <h1 id ="gg">Desarrollo</h1>  
+<!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+        <a name="p1"></a>
+    <h1 id ="gg">Problema 1</h1>
+        
+        <div class="content"><pre class="codeinput"><span class="keyword">function</span> [F]=fun1(a,w)
+F=rdivide(a,a^2+w^2);
+<span class="keyword">end</span>
+</pre>
+    <!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+            <a name="p2"></a>
+     <h1 id ="gg">Problema 2</h1>
+<img vspace="5" hspace="5" src="graficadora_01.png" alt="">
+ <!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+            <a name="p3"></a>
+    <h1 id ="gg" >Problema 3</h1>
+            <img vspace="5" hspace="5" src="Grafica_1.jpg" alt="">
+            <img vspace="5" hspace="5" src="Grafica_2.jpg" alt="">
+            <img vspace="5" hspace="5" src="Grafica%20_3.jpg" alt="">
+<!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+            <a name="p4"></a>
+    <h1 id ="gg">Problema 4</h1>
+            <div class="content"><pre class="codeinput">f=@(t) exp(-t).*cos(2*pi*t)
+f(0)
+t = (-2:2);
+f(t)
+
+figure
+plot(t,f(t));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'f(t)'</span>);
+grid <span class="string">on</span>;
+
+
+figure
+t = (-2:0.01:2);
+plot (t,f(t));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'f(t)'</span>);
+grid <span class="string">on</span>;
+</pre><pre class="codeoutput">
+f =
+
+  function_handle with value:
+
+    @(t)exp(-t).*cos(2*pi*t)
+
+
+ans =
+
+     1
+
+
+ans =
+
+    7.3891    2.7183    1.0000    0.3679    0.1353
+
+</pre><img vspace="5" hspace="5" src="P4M1_01.png" alt=""> 
+    <img vspace="5" hspace="5" src="P4M1_02.png" alt=""> 
+                <div class="content"><pre class="codeinput">u =@(t) t&gt;=0
+
+figure
+t = (-2:2);
+plot (t,u(t));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'u(t)'</span>);
+grid ;
+
+figure
+t = (-2:0.01:2);
+plot (t,u(t));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'u(t)'</span>);
+axis ([-2 2 -0.1 1.1]);
+
+
+figure
+    p = @(t) (t&gt;=0) &amp; (t&lt;1);
+     t = (-1:0.01:2);
+     plot(t,p(t));
+     xlabel(<span class="string">'t'</span>);
+     ylabel(<span class="string">'p(t) = u(t)-u(t-1)'</span>);
+     axis ([-1 2 -.1 1.1]);
+</pre><pre class="codeoutput">
+u =
+
+  function_handle with value:
+
+    @(t)t&gt;=0
+
+</pre><img vspace="5" hspace="5" src="P4M2_01.png" alt=""> 
+    <img vspace="5" hspace="5" src="P4M2_02.png" alt=""> 
+    <img vspace="5" hspace="5" src="P4M2_03.png" alt=""> 
+                    
+                    <div class="content"><pre class="codeinput">g =@(t) exp(-t).*cos(2*pi*t).*(t&gt;=0)
+figure
+t = (-2:0.01:2);
+plot(t,g(2*t+1));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'g(2t+1)'</span>)';
+grid;
+
+figure
+plot(t,g(-t+1));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'g(-t+1)'</span>)';
+grid;
+
+figure
+plot(t,g(2*t+1) +g(-t+1));
+xlabel(<span class="string">'t'</span>);
+ylabel(<span class="string">'h(t)'</span>)'; grid;
+</pre><pre class="codeoutput">
+g =
+
+  function_handle with value:
+
+    @(t)exp(-t).*cos(2*pi*t).*(t&gt;=0)
+
+</pre><img vspace="5" hspace="5" src="P4M3_01.png" alt=""> 
+    <img vspace="5" hspace="5" src="P4M3_02.png" alt=""> 
+    <img vspace="5" hspace="5" src="P4M3_03.png" alt=""> 
+                        <div class="content"><pre class="codeinput">x = @(t) exp(-t).*((t&gt;=0)&amp;(t&lt;1));
+t = (0:0.01:1);
+E_x= sum(x(t).*(x(t).*0.01))
+t = (0:0.01:1);
+
+integral =@(t) exp(-2*t).*((t&gt;=0)&amp;(t&lt;1));
+Ef= quad(integral,0,1)
+
+
+g_squared =@(t) exp(-2*t).*(cos(2*pi*t).^2).*(t&gt;=0);
+t = (0:0.001:100);
+E_g = sum(g_squared(t)*0.001)
+
+E_g2 = quad(g_squared, 0,100)
+</pre><pre class="codeoutput">
+E_x =
+    0.4367
+    
+Ef =
+    0.4323
+    
+E_g =
+    0.2567
+    
+E_g2 =
+    0.2562
+    
+
+</pre>
+<!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+                            <a name="p5"></a>
+    <h1 id ="gg">Problema 5</h1>
+                            <div class="content"><pre class="codeinput">x=@(t) -t.*(t&gt;=-4 &amp; t&lt;0)+ t.*(t&gt;=0 &amp; t&lt;2);
+
+
+figure
+t = (-5:0.001:3);
+plot (t,x(t));
+grid <span class="string">on</span> ;
+axis([-6 5 -1 6]);
+ax=gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+ax.Box=<span class="string">'off'</span>;
+title(<span class="string">'grafica de las se&ntilde;ales f(t)=-t(u(t+4)-u(t))+t(u(t)-u(t-2))'</span>)
+
+figure
+t = (-10:0.001:10);
+plot (t,x(t-4));
+grid <span class="string">on</span> ;
+axis([-2 7 -1 6]);
+ax=gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+ax.Box=<span class="string">'off'</span>;
+title(<span class="string">'grafica de las se&ntilde;ales f(t-4)'</span>)
+
+figure
+t = (-10:0.001:10);
+plot (t,x(t/1.5));
+grid <span class="string">on</span> ;
+axis([-9 7 -1 6]);
+ax=gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+ax.Box=<span class="string">'off'</span>;
+title(<span class="string">'grafica de las se&ntilde;ales f(t/1.5)'</span>)
+
+figure
+t = (-10:0.001:10);
+plot (t,x(-t));
+grid <span class="string">on</span> ;
+axis([-4 5 -1 6]);
+ax=gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+ax.Box=<span class="string">'off'</span>;
+title(<span class="string">'grafica de las se&ntilde;ales f(-t)'</span>)
+
+figure
+t = (-10:0.001:10);
+plot (t,x(2.*t-4));
+grid <span class="string">on</span> ;
+axis([-1 4 -1 6]);
+ax=gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+ax.Box=<span class="string">'off'</span>;
+title(<span class="string">'grafica de las se&ntilde;ales f(2t-4)'</span>)
+
+figure
+t = (-10:0.001:10);
+plot (t,x(2-t));
+grid <span class="string">on</span> ;
+axis([-1 8 -1 6]);
+ax=gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+ax.Box=<span class="string">'off'</span>;
+title(<span class="string">'grafica de las se&ntilde;ales f(2-t)'</span>)
+</pre><img vspace="5" hspace="5" src="problema112_01.png" alt=""> <img vspace="5" hspace="5" src="problema112_02.png" alt=""> <img vspace="5" hspace="5" src="problema112_03.png" alt=""> <img vspace="5" hspace="5" src="problema112_04.png" alt=""> <img vspace="5" hspace="5" src="problema112_05.png" alt=""> <img vspace="5" hspace="5" src="problema112_06.png" alt=""> <p class="footer"><br>
+
+<!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+                                <a name="p6"></a>
+    <h1 id ="gg">Problema 6</h1>
+                                <div class="content"><pre class="codeinput"><span class="comment">%Recibe una funci&oacute;n (an&oacute;nima) y los limites de integraci&oacute;n</span>
+
+<span class="keyword">function</span> [q]  = Energyorasi(f,p1,p2)
+
+q= integral(f,p1,p2);
+
+ezplot(f);
+</pre><br>
+<!-- ########################################################################################### -->
+<!-- ########################################################################################### -->
+                                    <a name="p7"></a>
+    <h1 id ="gg">Problema 7</h1>
+<div class="content"><pre class="codeinput"><span class="comment">%Recibe una funci&oacute;n (an&oacute;nima)</span>
+
+<span class="keyword">function</span> [q]  = Potenciaorasi(f,T)
+
+q= (1/T)*integral(f,-T/2,T/2)
+
+ezplot(f)
+</pre>
+    </body></html>
