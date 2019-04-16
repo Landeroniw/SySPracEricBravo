@@ -83,3 +83,10 @@ a{
     text-align: center;
      margin:100px 100px 20px; 
 }
+#papu{
+  text-align: center;
+  color: red;
+    text-shadow: 1px 1px black;
+    font-style: oblique;
+    font-size:2vw;  
+}
