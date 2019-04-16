@@ -90,3 +90,10 @@ a{
     font-style: oblique;
     font-size:2vw;  
 }
+#papa{
+  text-align: center;
+  color: red;
+    text-shadow: 1px 1px black;
+    font-style: oblique;
+    font-size:4vw;  
+}
